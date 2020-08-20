@@ -4,7 +4,7 @@ cd $CWD
 source /home/docker/docker-script/deploy/config/env.sh
 
 if [ ${WARMUP_USE_YN} != 'Y' ]; then
-  exit 0
+  exit 1
 fi
 
 SERVER_LIST=$(cat ${NGINX_REVERSE_PROXY_TARGET_FILE} | awk '{print $2}')
