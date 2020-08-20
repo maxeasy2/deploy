@@ -3,7 +3,7 @@
 GROUP=$1
 if [ -z "$GROUP" ]; then
   echo "Group is null"
-  exit 0
+  exit 1
 fi
 
 CONTAINER_IDS=`docker ps | grep ${GROUP}-${CONTAINER_NAME} | awk '{print \$1}' | xargs`
